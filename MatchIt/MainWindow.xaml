@@ -1,0 +1,44 @@
+﻿<Window x:Class="MatchIt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatchIt"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/mainbackground.jpg"/>
+        </Grid.Background>
+
+        <Label Content="MATCH IT!" HorizontalAlignment="Center" Margin="0,10,0,0" Height="123" Width="488" FontSize="92" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalAlignment="Top">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF34FF9E" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label Content="How Fast Can You Match Them All?" HorizontalAlignment="Center" Margin="0,138,0,0" VerticalAlignment="Top" Height="36" Width="403" HorizontalContentAlignment="Center" FontSize="26" FontStyle="Italic" FontFamily="Corbel">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF34FF9E"/>
+                    <GradientStop Color="#FF007D41" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Button Content="Quick Play" HorizontalAlignment="Left" Margin="322,217,0,0" VerticalAlignment="Top" Height="60" Width="170" Click="Button_Click" Background="#FF1CFF68" FontFamily="Verdana" FontWeight="Bold" FontSize="22"/>
+        <Button Content="Endless" HorizontalAlignment="Left" Margin="322,311,0,0" VerticalAlignment="Top" Height="60" Width="170" Click="Button_Click_1" Background="#FFB3FFCC" FontSize="24" FontWeight="Bold" FontFamily="Verdana"/>
+        <ComboBox  x:Name="comboboxTheme" HorizontalAlignment="Left" Margin="21,66,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="{Binding ElementName=cbNone, Mode=OneWay}">
+            <ComboBoxItem x:Name="cbNone" Content="None"/>
+            <ComboBoxItem x:Name="cbAnimal" Content="Animal"/>
+            <ComboBoxItem x:Name="cbAnime" Content="Anime"/>
+        </ComboBox>
+        <Label Content="Theme" HorizontalAlignment="Left" Margin="30,35,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Width="103" HorizontalContentAlignment="Center" FontSize="14"/>
+        <Label Content="⇽" HorizontalAlignment="Left" Margin="513,208,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="34" HorizontalContentAlignment="Center"/>
+        <Label Content="⇽" HorizontalAlignment="Left" Margin="513,309,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="34" HorizontalContentAlignment="Center"/>
+        <Label Content="   See how fast you &#xD;&#xA;can solve one table!" HorizontalAlignment="Left" Margin="558,199,0,0" VerticalAlignment="Top" Height="85" Width="232" Background="#D8FFFFFF" HorizontalContentAlignment="Center" FontSize="20" VerticalContentAlignment="Center"/>
+        <Label Content="How far can you solve&#xD;&#xA;     with only 3 lives?" HorizontalAlignment="Left" Margin="558,307,0,0" VerticalAlignment="Top" Height="85" Width="232" Background="#D8E6E6E6" HorizontalContentAlignment="Center" FontSize="20" VerticalContentAlignment="Center"/>
+    </Grid>
+</Window>
